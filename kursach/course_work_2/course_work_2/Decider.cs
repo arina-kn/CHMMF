@@ -77,7 +77,7 @@ namespace course_work_2
             for (int i = 1; i < I; i++)
                 secondLayer[i] = firstLayer[i] + a * (firstLayer[i + 1] - 2 * firstLayer[i] + firstLayer[i - 1]);
             secondLayer[0] = u0;
-            secondLayer[I] = (secondLayer[I - 1] - alpha * hx * u0 / k) / (1 - alpha * hx / k);
+            secondLayer[I] = (secondLayer[I - 1] + alpha * hx * u0 / k) / (1 + alpha * hx / k);
         }
         protected void CollectVertData(int index)
         {
